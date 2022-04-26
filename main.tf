@@ -36,3 +36,12 @@ resource "fakewebservices_database" "prod_db" {
   name = "Production DB"
   size = 256
 }
+resource "fakewebservices_server" "server-3" {
+  name = "Server 3"
+  type = "t2.macro"
+}
+
+resource "fakewebservices_server" "server-4" {
+  name = "Server 4"
+  type = "t2.macro"
+}
