@@ -23,7 +23,7 @@ resource "fakewebservices_server" "servers" {
   count = 2
 
   name = "Server ${count.index + 5}"
-  type = "t2.micro"
+  type = "t2.mecro"
   vpc  = fakewebservices_vpc.secondary_vpc.name
 }
 
