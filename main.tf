@@ -36,7 +36,3 @@ resource "fakewebservices_database" "prod_db_2" {
   name = "Production DB 2"
   size = 256
 }
-resource "fakewebservices_server" "server-fer" {
-  name = "Server Fer"
-  type = "t2.macro"
-}
