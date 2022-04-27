@@ -14,30 +14,30 @@
 # in backend.tf.
 
 
-resource "fakewebservices_vpc" "primary_vpc" {
-  name       = "Primary VPC"
+resource "fakewebservices_vpc" "secondary_vpc" {
+  name       = "Secondary VPC"
   cidr_block = "0.0.0.0/1"
 }
 
 resource "fakewebservices_server" "servers" {
   count = 2
 
-  name = "Server ${count.index + 1}"
+  name = "Server ${count.index + 5}"
   type = "t2.micro"
   vpc  = fakewebservices_vpc.primary_vpc.name
 }
 
-resource "fakewebservices_load_balancer" "primary_lb" {
-  name    = "Primary Load Balancer"
+resource "fakewebservices_load_balancer" "secondary_lb" {
+  name    = "Secondary Load Balancer"
   servers = fakewebservices_server.servers[*].name
 }
 
-resource "fakewebservices_database" "prod_db" {
-  name = "Production DB"
+resource "fakewebservices_database" "prod_db_2" {
+  name = "Production DB 2"
   size = 256
 }
-resource "fakewebservices_server" "server-3" {
-  name = "Server 3"
+resource "fakewebservices_server" "server-fer" {
+  name = "Server Fer"
   type = "t2.macro"
 }
 
