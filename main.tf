@@ -16,7 +16,7 @@
 
 resource "fakewebservices_vpc" "secondary_vpc" {
   name       = "Secondary VPC"
-  cidr_block = "0.0.0.0/1"
+  cidr_block = "${CIDRBLOCK}"
 }
 
 resource "fakewebservices_server" "servers" {
