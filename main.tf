@@ -41,7 +41,3 @@ resource "fakewebservices_server" "server-3" {
   type = "t2.macro"
 }
 
-resource "fakewebservices_server" "server-4" {
-  name = "Server 4"
-  type = "t2.macro"
-}
