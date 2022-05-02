@@ -32,7 +32,4 @@ resource "fakewebservices_load_balancer" "secondary_lb" {
   servers = fakewebservices_server.servers[*].name
 }
 
-resource "fakewebservices_database" "prod_db_2" {
-  name = "Production DB 2"
-  size = 256
-}
+
